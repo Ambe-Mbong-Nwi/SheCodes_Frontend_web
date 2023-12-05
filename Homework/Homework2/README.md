@@ -1,4 +1,4 @@
-# Shecodes Frontend Web Design Week One
+# Shecodes Frontend Web Design Week Two
 
 ## Table of contents
 
