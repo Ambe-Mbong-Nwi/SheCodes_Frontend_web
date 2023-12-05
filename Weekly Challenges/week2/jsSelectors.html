@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Week Two</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(7, 99, 99);
+        text-decoration: underline;
+        padding: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my second week with SheCodes</h1>
+
+    <script>
+      //BONUS
+      let li = document.querySelector("li"); //select first list item
+      let day = document.querySelector(".day"); //select first element with class day
+      let paragraph = document.querySelector("ul#list p"); //Returns the first p element found in a ul with id list.
+
+      let lis = document.querySelectorAll("li");
+      let paragraphs = document.querySelectorAll("li#special p");
+      // Returns all elements (if any) on the page matching the selector.
+
+      function sayHi() {
+        alert("hi");
+      }
+
+      let element = document.querySelector("#city");
+      element.addEventListener("click", sayHi);
+      //The sayHi function will be executed each time the city element is clicked. Click is the most common event type but you can also use click | mouseenter | mouseleave | mousedown | mouseup | mousemove | keydown | keyup.
+    </script>
+  </body>
+</html>

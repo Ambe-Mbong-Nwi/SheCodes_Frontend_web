@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Week Two</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(7, 99, 99);
+        text-decoration: underline;
+        padding: 250px 0 0 20px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(7, 99, 99);
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my second week with SheCodes</h1>
+    <button>Apply now</button>
+
+    <script>
+      function apply() {
+        firstName = prompt("What is your first name?");
+        age = prompt("What is your age?");
+
+        let h1 = document.querySelector("h1");
+
+        if (age >= 18) {
+          h1.innerHTML = "Hi, " + firstName + "! Welcome to Shecodes !";
+        } else {
+          h1.innerHTML = "Hi, " + firstName + "! You cannot join SheCodes.";
+        }
+      }
+
+      applyButton = document.querySelector("button");
+
+      applyButton.addEventListener("click", apply);
+      //Click is the most common event type but you can also use click | mouseenter | mouseleave | mousedown | mouseup | mousemove | keydown | keyup.
+    </script>
+  </body>
+</html>

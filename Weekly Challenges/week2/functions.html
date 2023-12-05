@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Week Two</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(7, 99, 99);
+        text-decoration: underline;
+        padding: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my second week with SheCodes</h1>
+
+    <script>
+      function canSpeakPortuguese() {
+        country = prompt("Enter the name of your country."); //or use .toUpperCase().trim() here instead of down
+
+        if (
+          country.toUpperCase().trim() === "BRAZIL" ||
+          country.toUpperCase().trim() === "PORTUGAL" //.trim() method to remove leading and trailing white spaces.
+        ) {
+          alert("You speak Portuguese.");
+        } else {
+          alert("Go learn Portuguese.");
+        }
+      }
+
+      canSpeakPortuguese();
+
+      //BONUS
+      // function sayFact() {
+      //     let name = prompt("What's your name?");
+
+      //     if (name === "Sofia") {
+      //         alert("Your name comes from the Greek -> Sophia");
+      //     }
+      // }
+
+      // sayFact();
+
+      // function fullName(firstName, lastName) {
+      //     alert(firstName + " " + lastName);
+      // }
+
+      // let firstName = prompt("What's your first name?");
+      // let lastName = prompt("What's your last name?");
+      // fullName(firstName, lastName);
+      // fullName("Kate", "Robinson");
+
+      // function add(x, y) {
+      // return x + y;
+      // }
+
+      // let result = add(3, 4);
+      // let result2 = add(result, 0);
+
+      // function getFullName(firstName, lastName) {
+      //     let fullName = firstName + " " + lastName;
+      //     return fullName;
+      // }
+
+      // let userFullName = getFullName("Kate", "Robinson");
+      // alert(userFullName); // Kate Robinson
+      // alert(getFullName("Julie", "Smith")); // Julie Smith
+    </script>
+  </body>
+</html>

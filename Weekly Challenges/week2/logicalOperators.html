@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Week Two</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(7, 99, 99);
+        text-decoration: underline;
+        padding: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my second week with SheCodes</h1>
+
+    <script>
+      let country = prompt("What country are you from?");
+
+      if (
+        country.toUpperCase().trim() === "BRAZIL" ||
+        country.toUpperCase().trim() === "PORTUGAL" //.trim() method to remove leading and trailing white spaces.
+      ) {
+        alert("You speak Portuguese.");
+      } else {
+        alert("You don't speak Portuguese.");
+      }
+    </script>
+  </body>
+</html>
