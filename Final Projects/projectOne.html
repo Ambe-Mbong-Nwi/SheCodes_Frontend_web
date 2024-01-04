@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ambe's Music Project</title>
+
+    <style>
+      div {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center; /*easy way to align page content to center*/
+        padding: 20px 5%;
+        background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+        border-radius: 15px;
+        box-shadow: 5px 5px 28px #F0A5BE, 10px 10px 28px #F0BAB2, 15px 15px 28px #C5E9DC;
+      }
+
+      img {
+        width: 40%;
+      }
+
+      hr {
+        margin: 20px;
+      }
+
+      p {
+        line-height: 25px;
+        font-size: larger;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+       button {
+        background-color:#F0BAB2;
+        color: black;
+        font-size: 15px;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 40px;
+        transition: all 200ms ease-in-out;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      em {
+        font-size: 30px;
+        font-weight: 900;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button:hover {
+        background-color:#F0A5BE;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Music, A Way To One's Heart</h1>
+
+      <hr />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/355/original/memusic.jpeg?1702675806"
+        alt="lady with headphones on"
+      />
+
+      <h2>Here Is My Opinion.</h2>
+      <p>
+        Music is a universal language that transcends barriers of culture,
+        language, and time. It has the remarkable power to evoke emotions, stir
+        memories, and bring people together. Whether it's the catchy rhythm of a
+        pop song, the soothing melodies of classical compositions, or the raw
+        energy of rock and roll, music has a way of resonating with our souls.
+
+        <br />Listening to music can transport us to different worlds, uplift
+        our spirits, and provide comfort during challenging times. It has the
+        ability to calm our minds, and inspire us to
+        dream. Music can heal wounds that words alone cannot reach, offering
+        solace and understanding when we struggle to express ourselves.
+
+        <p>To learn more, visit <a href="https://en.wikipedia.org/wiki/Music">Wikipedia</a></p>
+      </p>
+      <p>Enough about me. <span><strong>Are you a music fan?</strong></span></p>
+      <button>Find Out!!!</button>
+      <hr />
+      <em>🤔 Hope you're one of us.</em>
+    </div>
+
+    <script>
+
+        function test() {
+            let em = document.querySelector("em");
+
+            let name = prompt("What is your nuckname?");
+            let answer = prompt("Do you love music? YES or NO");
+
+            if (answer.toUpperCase().trim() === "YES") {
+                em.innerHTML = `WOW, ${name} you are indeed a music fan. 😜`;
+            } 
+            else if(answer.toUpperCase().trim() === "NO") {
+
+                em.innerHTML = `${name}, I hope you learn to love music. 🙃`;
+            } else {
+     
+                em.innerHTML = `${name}, Where do you belong? 🤔 `;
+            }
+                
+            }
+
+            let findbutton = document.querySelector("button");
+            findbutton.addEventListener("click", test);
+        
+        
+
+
+    </script>
+  </body>
+</html>
