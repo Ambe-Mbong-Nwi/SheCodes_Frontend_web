@@ -31,5 +31,5 @@ Webpage that allows the user to search for the weather details in any city and g
 ## Author
 
 - Author - [Ambe Mbong-Nwi Nchang](https://github.com/Ambe-Mbong-Nwi)
-- Source Code - [Github] ("https://github.com/Ambe-Mbong-Nwi/Shecodes_Hosting_Challenge")
-- Hosting - [Netlify] ("https://dreamy-semifreddo-71c770.netlify.app/")
+- Source Code - [Github](https://github.com/Ambe-Mbong-Nwi/Shecodes_Hosting_Challenge)
+- Hosting - [Netlify] (https://dreamy-semifreddo-71c770.netlify.app/)
