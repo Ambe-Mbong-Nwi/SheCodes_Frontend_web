@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes Plus</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 900;
+        margin: 0;
+        font-size: 34px;
+        line-height: 48px;
+      }
+
+      h1 h2,
+      h3 {
+        color: #231d3c;
+      }
+
+      .logo {
+        display: block;
+        margin: 30px auto;
+        width: 150px;
+      }
+    </style>
+    <!-- extension to be able to use axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="SheCodes Plus Logo" class="logo" />
+    <h1>JavaScript AJAX</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>
+      Import Axios to this page
+      <br />
+      <a href="https://github.com/axios/axios">Axios on GitHub</a>
+    </p>
+
+    <h3>JS Challenge 2</h3>
+    <p>
+      Given the API
+      <a href="https://jsonplaceholder.typicode.com/"
+        >https://jsonplaceholder.typicode.com/</a
+      >, get the comments (/comments) and log the API response
+    </p>
+
+    <h3>JS Challenge 3</h3>
+    <p>Log the first comment email from the API response</p>
+
+    <script>
+      //remember to import axios in the html head tag above.
+      //challenge 1
+
+      let commentURL = "https://jsonplaceholder.typicode.com/comments"; //store api url in a variable
+
+      function apiResponse(response) {
+        //function that executes after axios has gotten the data from the url in the variable
+        console.log(response.data); //logging all the data from the url
+      }
+
+      axios.get(commentURL).then(apiResponse); //axios gets the url, then waits for the response which is sent to and executed in the function executed
+
+      //challenge 2
+
+      let firstcommentURL = "https://jsonplaceholder.typicode.com/comments/1"; //targetting the first object in the array
+
+      function emailResponse(response) {
+        console.log(response.data.email); //outputing the email in that first array object
+      }
+
+      axios.get(firstcommentURL).then(emailResponse);
+
+      //challenge 2 another approach
+      let url = "https://jsonplaceholder.typicode.com/comments";
+
+      function showFirstComment(response) {
+        console.log(response.data[0].email);
+      }
+
+      axios.get(url).then(showFirstComment);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes</title>
+    <style>
+      .total {
+        padding: 50px;
+        display: block;
+        margin: 100px 20%;
+        border: 2px solid black;
+      }
+
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      .form_group {
+        margin: 10px 0px;
+      }
+
+      label {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="total">
+      <h1>Welcome to HTML Forms</h1>
+      <form action="/submit">
+        <!--page where form info goes to after submission -->
+        <div class="form_group">
+          <label for="email">Enter your email address</label><br />
+          <!-- for connects the label and input using id -->
+          <input type="email" name="email" id="email" required />
+          <!-- use label above or placeholder. required so field must be filled before form submission. -->
+        </div>
+        <div class="form_group">
+          <label for="password">Enter your password</label><br />
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div>
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

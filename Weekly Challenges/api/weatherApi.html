@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes Plus</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 900;
+        margin: 0;
+        font-size: 34px;
+        line-height: 48px;
+      }
+
+      h1 h2,
+      h3 {
+        color: #231d3c;
+      }
+
+      .logo {
+        display: block;
+        margin: 30px auto;
+        width: 150px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="SheCodes Plus Logo" class="logo" />
+    <h1>JavaScript Weather API</h1>
+
+    <h3>JS Challenge 1</h3>
+    <p>Import Axios</p>
+
+    <h3>JS Challenge 2</h3>
+    <p>Get your API key and save in a variable called apiKey</p>
+
+    <h3>JS Challenge 3</h3>
+    <p>Get the API response for the weather in Sydney, using metrics unit</p>
+
+    <h3>JS Challenge 4</h3>
+    <p>Log the current temperature in Sydney</p>
+
+    <h3>JS Challenge 5</h3>
+    <p>
+      Replace the h1 of this page with the weather in Sydney: i.e: It is 19
+      degrees in Sydney
+    </p>
+
+    <script>
+      let apiKey = "46a056oa19894b3bfe7e734b4tb25075";
+      let query = "Sydney"; //location to be used in apiUrl below
+      let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metrics`; //use back ticks so we can include the value of the variables key and query. Units here is metrics.
+
+      function dispWeather(response) {
+        console.log(response.data.temperature.current);
+        let sTemp = Math.round(response.data.temperature.current); //getting current temp from api
+        let city = response.data.city;
+
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = `It is ${sTemp} degrees in ${city}`;
+      }
+
+      axios.get(apiUrl).then(dispWeather); //axios gets api, then waits for response which is sent and executed in the function above to provide the results
+    </script>
+  </body>
+</html>
